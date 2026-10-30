@@ -1,0 +1,12 @@
+LYNE GitHub Windows build
+
+1. Replace the contents of your GitHub repository with the contents of this ZIP.
+2. Make sure package.json is at the repository root (or leave the folder structure intact; the workflow searches for it).
+3. Make sure .github/workflows/main.yml is present.
+4. Commit the uploaded files to the main branch.
+5. Open Actions > Build LYNE for Windows > Run workflow.
+
+The Windows build command intentionally skips the optional native snap-preview add-on.
+The application has a regular preview fallback, so the installer can be built without that optional native module.
+
+The workflow uploads the Windows installer as an artifact named LYNE-Windows-Installer.
